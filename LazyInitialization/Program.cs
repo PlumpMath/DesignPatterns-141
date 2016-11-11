@@ -1,18 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LazyInitialization
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Customer customer = new Customer();
-           // customer.CustomerName = "sss";
-           
+            Console.WriteLine("Customer Start Read");
+            var customer = new Customer();
+            Console.WriteLine("Customer Readed");
+            Console.ReadLine();
+
+            customer.PrintOrders();
+            Console.ReadLine();
+
+            customer.PrintOrders();
+            Console.ReadLine();
         }
     }
 }
