@@ -10,6 +10,9 @@ namespace LazyInitialization
     {
         static void Main(string[] args)
         {
+            Customer customer = new Customer();
+           // customer.CustomerName = "sss";
+           
         }
     }
 }
