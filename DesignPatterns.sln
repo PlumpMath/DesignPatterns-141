@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proxy", "Proxy\Proxy.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Observer", "Observer\Observer.csproj", "{1C0E8C4B-9B39-46F6-A42F-9804055FEAD8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Singelton", "Singelton\Singelton.csproj", "{EF8D8FAC-F78A-40FD-83E5-ED63D1CFC3E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1C0E8C4B-9B39-46F6-A42F-9804055FEAD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C0E8C4B-9B39-46F6-A42F-9804055FEAD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C0E8C4B-9B39-46F6-A42F-9804055FEAD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF8D8FAC-F78A-40FD-83E5-ED63D1CFC3E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF8D8FAC-F78A-40FD-83E5-ED63D1CFC3E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF8D8FAC-F78A-40FD-83E5-ED63D1CFC3E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF8D8FAC-F78A-40FD-83E5-ED63D1CFC3E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

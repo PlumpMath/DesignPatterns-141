@@ -1,11 +1,21 @@
-using System;
 using System.Collections.Generic;
 
 namespace Observer
 {
+
     public class Stock : IObservable
     {
-        private List<IObserver> _observers; 
+        public delegate void StockPriceHandler(Stock stock);
+
+        public event StockPriceHandler OnChange
+        {
+            add { OnChange += value; }
+            remove { throw new System.NotImplementedException(); }
+        }
+
+
+        private readonly List<IObserver> _observers;
+
         public Stock()
         {
             _observers = new List<IObserver>();
@@ -13,18 +23,13 @@ namespace Observer
 
         public string Name { get; protected set; }
         public int Price { get; private set; }
-
-        public void SetPrice(int price)
-        {
-            Price = price;
-            NotifyObservers();
-        }
+     
 
         public void RegisterObserver(IObserver observer)
         {
             if (observer != null)
             {
-                this._observers.Add(observer);
+                _observers.Add(observer);
             }
         }
 
@@ -32,7 +37,7 @@ namespace Observer
         {
             if (observer != null)
             {
-                this._observers.Remove(observer);
+                _observers.Remove(observer);
             }
         }
 
@@ -43,5 +48,14 @@ namespace Observer
                 observer.Update(this);
             }
         }
+
+        public void SetPrice(int price)
+        {
+            Price = price;
+            NotifyObservers();
+           
+        }
+
+     
     }
 }

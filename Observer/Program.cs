@@ -18,11 +18,19 @@ namespace Observer
             ibm.RegisterObserver(mobile);
             apple.RegisterObserver(displayBoard);
 
+           // ibm.CallbackStockPriceChangeDelegate = PrintCallback;
             ibm.SetPrice(11);
 
             apple.SetPrice(12);
             Console.ReadLine();
 
+        }
+
+       
+
+        private static void PrintCallback(int i)
+        {
+            Console.WriteLine(string.Format("Info from delegate {0}",i));
         }
     }
 }
